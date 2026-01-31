@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz CRUD</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./main.js" defer></script>
 </head>
+
 <body>
-    
+
+  <header>
+    <h1>Quiz CRUD</h1>
+    <p>Build your own quiz and practice CRUD + Edit</p>
+  </header>
+
+  <main>
+
+    <!-- ======================
+         QUIZ CREATION (CRUD)
+    ======================= -->
+
+    <section id="quiz-crud">
+      <h2>Question Bank</h2>
+
+      <form id="quiz-form">
+        <input
+          type="text"
+          id="question-input"
+          placeholder="Enter a question"
+        />
+
+        <input
+          type="text"
+          id="answer-input"
+          placeholder="Enter the answer"
+        />
+
+        <button type="submit" id="submit-btn">
+          Add
+        </button>
+
+        <button type="button" id="cancel-btn">
+          Cancel
+        </button>
+      </form>
+
+      <p id="quiz-message"></p>
+
+      <ul id="question-list"></ul>
+    </section>
+
+    <hr />
+
+    <!-- ======================
+         QUIZ PLAY MODE
+    ======================= -->
+
+    <section id="quiz-play">
+      <h2>Play Quiz</h2>
+
+      <button id="start-quiz">Start Quiz</button>
+
+      <p id="play-question"></p>
+
+      <input
+        type="text"
+        id="play-answer"
+        placeholder="Your answer"
+      />
+
+      <button id="submit-answer">
+        Submit Answer
+      </button>
+
+      <p id="play-feedback"></p>
+      <p id="play-score"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built with JavaScript — CRUD Training Project</p>
+  </footer>
+
 </body>
 </html>
