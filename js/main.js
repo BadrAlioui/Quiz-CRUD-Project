@@ -76,3 +76,10 @@ quizForm.addEventListener("submit", (e) => {
 
 
 });
+
+btnCancel.addEventListener('click', ()=>{
+  indexEdit = null;
+  quizForm.reset();
+  renderMessage("Edit cancelled");
+})
+
