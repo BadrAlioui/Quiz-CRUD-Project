@@ -28,14 +28,25 @@ function renderQuiz(list) {
     li.textContent = `${quiz.question} - ${quiz.answer} `;
     ul.appendChild(li);
     const btnEdit = document.createElement("button");
+    const btnRemove = document.createElement("button");
+    btnRemove.textContent = "Remove";
     btnEdit.textContent = "Edit"
     li.appendChild(btnEdit);
+    li.appendChild(btnRemove);
     btnEdit.addEventListener("click", () => {
     indexEdit = i;
     questionInput.value = list[indexEdit].question;
     answerInput.value = list[indexEdit].answer;
     renderMessage(`Editing #${i + 1}`);
   });
+
+  btnRemove.addEventListener('click', ()=>{
+    list.splice(i, 1);
+    renderQuiz(list);
+    renderMessage("Removed")
+    indexEdit = null;
+    quizForm.reset();
+  })
   }
 
   
